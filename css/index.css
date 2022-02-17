@@ -14,3 +14,12 @@
 .margin-reset{
     margin: 0;
 }
+.button-success{
+    color: white;
+    border-color: rgb(56, 117, 87);
+    background-color: rgb(47, 158, 71);
+    transition: 0.2s;
+}
+.button-success:hover{
+    color:white;
+}

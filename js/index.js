@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     const urlForm = document.getElementById("urlForm");
-
     const resultField = document.getElementById("resultShortened");
+    const copyButton = document.getElementById("copyButton");
 
     function doThing(data = null) {
         // console.log(data);
@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(response);
         console.log(response.result_url);
         resultField.value = response.result_url;
+        
     })
     .catch(err => {
         console.error(err);
@@ -29,8 +30,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     urlForm.addEventListener("submit", function(e){
         e.preventDefault();
+        copyButton.classList.remove("button-success");
+        copyButton.innerText = "Copy";
         const urlFormData = new FormData(urlForm);
         let jurl = JSON.stringify(Object.fromEntries(urlFormData.entries()));
         doThing(jurl);
+    })
+
+    copyButton.addEventListener("click", function(e) {
+        copyButton.classList.add("button-success");
+        copyButton.innerText = "Copied!";
     })
 })
