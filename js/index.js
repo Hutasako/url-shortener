@@ -19,13 +19,11 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(response => {
         console.log(response);
         console.log(response.result_url);
-        resultField.value = response.result_url;
-        
+        resultField.value = response.result_url;      
     })
     .catch(err => {
         console.error(err);
     });
-
     }
 
     urlForm.addEventListener("submit", function(e){
