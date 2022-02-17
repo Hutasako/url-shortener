@@ -3,7 +3,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlForm = document.getElementById("urlForm");
     const resultField = document.getElementById("resultShortened");
     const copyButton = document.getElementById("copyButton");
-    
+    const preloadCont = document.getElementById("preloaderContainer");
+    const resultsCont = document.getElementById("resultContainer");
+
+    let loadState = false;
+
     function doThing(data = null) {
         // console.log(data);
         fetch("https://url-shortener-service.p.rapidapi.com/shorten", {
@@ -19,7 +23,11 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => {
             // console.log(response);
             // console.log(response.result_url);
-            resultField.value = response.result_url;      
+            resultField.value = response.result_url;
+
+            // Hide loader, show result
+            resultsCont.classList.toggle("hidden");
+            preloadCont.classList.toggle("hidden");      
         })
         .catch(err => {
             console.error(err);
@@ -32,6 +40,10 @@ document.addEventListener("DOMContentLoaded", function() {
         copyButton.classList.remove("button-success");
         copyButton.innerText = "Copy";
 
+        // Show preloader on request, works nice for the first request
+        preloadCont.classList.toggle("hidden");
+        resultsCont.classList.toggle("hidden");
+        
         const urlFormData = new FormData(urlForm);
         let jurl = JSON.stringify(Object.fromEntries(urlFormData.entries()));
         doThing(jurl);
