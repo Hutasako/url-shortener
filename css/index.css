@@ -1,26 +1,27 @@
+/* Overrides and stuff */
+
 .header{
     margin-top: 9rem;
 }
 .text-align-center{
     text-align: center;
 }
-.d-inline{
-    display: inline-block;
+button.button-primary{
+    background-color: rgb(219, 192, 250);
+    border-color: white;
+    color:black;
 }
-.clipboard-SVG{
-    max-height: 32px;
-    fill:grey;
+button.button-primary:hover, button.button-primary:focus{
+    background-color: rgb(98, 79, 120);
+    border-color:white;
 }
-.margin-reset{
-    margin: 0;
-}
-.button-success{
+button.button-success{
     color: white;
     border-color: rgb(56, 117, 87);
     background-color: rgb(47, 158, 71);
     transition: 0.2s;
 }
-.button-success:hover, .button-success:focus{
+button.button-success:hover, button.button-success:focus{
     color:white;
 }
 .footer{

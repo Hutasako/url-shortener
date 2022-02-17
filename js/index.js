@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     .then((response) => response.json())
     .then(response => {
-        console.log(response);
-        console.log(response.result_url);
+        // console.log(response);
+        // console.log(response.result_url);
         resultField.value = response.result_url;      
     })
     .catch(err => {
