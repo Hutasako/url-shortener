@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlForm = document.getElementById("urlForm");
     const resultField = document.getElementById("resultShortened");
     const copyButton = document.getElementById("copyButton");
-
+    
     function doThing(data = null) {
         // console.log(data);
         fetch("https://url-shortener-service.p.rapidapi.com/shorten", {
@@ -38,7 +38,11 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     copyButton.addEventListener("click", function(e) {
-        copyButton.classList.add("button-success");
-        copyButton.innerText = "Copied!";
+        navigator.clipboard.writeText(resultField.value).then(function(e){
+            copyButton.classList.add("button-success");
+            copyButton.innerText = "Copied!";
+        }, function (err) {
+            console.log(err);
+        });
     })
 })
