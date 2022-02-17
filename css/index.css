@@ -1,7 +1,18 @@
 /* Overrides and stuff */
 
+@media (min-width: 400px) {
+    body { 
+        background-color: rgb(246, 232, 255);
+    }
+    .container { 
+        background-color: white;
+        padding: 0 0.5em 0.5em 0.5em;
+        border-radius: 6px;
+    }
+}
+
 .header{
-    margin-top: 9rem;
+    margin-top: 25%;
 }
 .text-align-center{
     text-align: center;
@@ -26,6 +37,5 @@ button.button-success:hover, button.button-success:focus{
 }
 .footer{
     position: fixed;
-  left: 50;
-  bottom: 0;
+    bottom: 0;
 }
