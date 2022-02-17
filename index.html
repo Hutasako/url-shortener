@@ -21,31 +21,34 @@
             <h1>Quick URL Shortener</h1>
             <p>Saw that link in half!</p>
         </section>
-        <div class="row">
-            <div class="twelve column text-align-center">
-                <form method="post" id="urlForm">
-                    <input class="u-full-width" type="url" name="url" placeholder="https://github.com" required>
-                    <button class="button-primary u-full-width" id="shortButton" type="submit">Shorten</button>
-                </form>
-            </div>
-        </div>
-        <div class="row">
+        <section class="body">
             <div class="row">
-                <div class="twelve column text-align-center hidden" id="preloaderContainer">
-                    <img src="img/preloader-circles.png" alt="loading icon" srcset="">
-                </div>
-                <div class="twelve column text-align-center" id="resultContainer">
-                    <input class="text" type="url" readonly placeholder="https://" id="resultShortened"> 
-                    <button id="copyButton" class="button">
-                        Copy
-                    </button>
+                <div class="twelve column text-align-center">
+                    <form method="post" id="urlForm">
+                        <input class="u-full-width" type="url" name="url" placeholder="https://github.com" required>
+                        <button class="button-primary u-full-width" id="shortButton" type="submit">Shorten</button>
+                    </form>
                 </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="row">
+                    <div class="twelve column text-align-center hidden" id="preloaderContainer">
+                        <img src="img/preloader-circles.png" alt="loading icon" srcset="">
+                    </div>
+                    <div class="twelve column text-align-center" id="resultContainer">
+                        <input class="text" type="url" readonly placeholder="https://" id="resultShortened"> 
+                        <button id="copyButton" class="button">
+                            Copy
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>       
         <section class="footer">
-            Powered by <a href="https://rapidapi.com/BigLobster/api/url-shortener-service">URL Shorterner Service</a>
-            <br>
-            Source <a href="https://github.com/Hutasako/url-shortener">here</a>
+                Powered by <a href="https://rapidapi.com/BigLobster/api/url-shortener-service">URL Shorterner Service</a>
+                <!-- <br> -->
+                Source <a href="https://github.com/Hutasako/url-shortener">here</a>
+
         </section>
     </div>
 </body>

@@ -40,10 +40,10 @@ document.addEventListener("DOMContentLoaded", function() {
         copyButton.classList.remove("button-success");
         copyButton.innerText = "Copy";
 
-        // Show preloader on request, works nice for the first request
+        // Show preloader on request
         preloadCont.classList.toggle("hidden");
         resultsCont.classList.toggle("hidden");
-        
+
         const urlFormData = new FormData(urlForm);
         let jurl = JSON.stringify(Object.fromEntries(urlFormData.entries()));
         doThing(jurl);
