@@ -1,0 +1,16 @@
+.header{
+    margin-top: 9rem;
+}
+.text-align-center{
+    text-align: center;
+}
+.d-inline{
+    display: inline-block;
+}
+.clipboard-SVG{
+    max-height: 32px;
+    fill:grey;
+}
+.margin-reset{
+    margin: 0;
+}

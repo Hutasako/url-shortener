@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="">
+    <meta name="author" content="EJ">
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <section class="header text-align-center">
+            <h1>Quick URL Shorterner</h1>
+            <p>Saw that link in half!</p>
+        </section>
+        <div class="row">
+            <div class="twelve column text-align-center">
+                <form method="post" id="urlForm">
+                    <input class="u-full-width" type="url" name="url" placeholder="https://github.com" required>
+                    <button class="button-primary u-full-width" id="shortButton" type="submit">Shorten</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row">
+                <div class="twelve column text-align-center">
+                    <input class="text" type="url" readonly placeholder="https://" id="resultShortened"> 
+                    <button class="button">
+                        Copy
+                    </button>
+                </div>
+            </div>
+        </div>
+        <section class="footer">
+            Powered by <a href="https://rapidapi.com/BigLobster/api/url-shortener-service">URL Shorterner Service</a>
+        </section>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>
