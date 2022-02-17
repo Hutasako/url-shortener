@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const copyButton = document.getElementById("copyButton");
     const preloadCont = document.getElementById("preloaderContainer");
     const resultsCont = document.getElementById("resultContainer");
-
+    const errorCont = document.getElementById("errorContainer");
     let loadState = false;
 
     function doThing(data = null) {
@@ -30,7 +30,9 @@ document.addEventListener("DOMContentLoaded", function() {
             preloadCont.classList.toggle("hidden");      
         })
         .catch(err => {
-            console.error(err);
+            errorCont.value = err;
+            errorCont.classList.toggle("hidden");
+            console.error(`Error: ${err}`);
         });
     }
 

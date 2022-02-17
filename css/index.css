@@ -19,6 +19,13 @@
 .text-align-center{
     text-align: center;
 }
+
+.text-failure{
+    background-color: rgb(235, 80, 85);
+    border-radius: 2px;
+    color: white;
+}
+
 button.button-primary{
     background-color: rgb(219, 192, 250);
     border-color: white;
