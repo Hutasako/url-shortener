@@ -24,6 +24,7 @@
     background-color: rgb(235, 80, 85);
     border-radius: 2px;
     color: white;
+    cursor: pointer;
 }
 
 button.button-primary{

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const preloadCont = document.getElementById("preloaderContainer");
     const resultsCont = document.getElementById("resultContainer");
     const errorCont = document.getElementById("errorContainer");
-    let loadState = false;
+    // let loadState = false;
 
     function doThing(data = null) {
         // console.log(data);
@@ -59,5 +59,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }, function (err) {
             console.log(err);
         });
+    })
+
+    errorCont.addEventListener("click", function(e) {
+        errorCont.classList.toggle("hidden");
     })
 })
